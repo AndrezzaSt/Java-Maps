@@ -8,23 +8,18 @@ public class Main {
 		return  l1;
 		
 	}
-	// Método que retorna a intersecção de l1 e l2
-	public static Set<Integer> intersect(Set<Integer> l1, Set<Integer> l2){
-		if(l1.size() > l2.size()) {
-			l1.retainAll(l2);
-			return l2; 
-		}else
+	// Método que retorna a intersecção de l1 e l2 
+	//é um conjunto de elementos que, simultaneamente, pertencem a dois ou mais conjuntos,
+	public static HashSet<Integer> intersect(HashSet<Integer> l1, HashSet<Integer> l2){
 			l2.retainAll(l1);
-			return l1; 
+			return l2; 
+		
 	}
 	//Método que retorna a diferença entre l1 e l2
 	public static Set<Integer> Diff(Set<Integer> l1, Set<Integer> l2){
-		if(l2.size() > l1.size()) {
 			l2.removeAll(l1);
-			return l1;
-		}else
-			l1.removeAll(l2);
 			return l2;
+		
 		
 	}
 	
@@ -48,9 +43,9 @@ public class Main {
 		
 		
 		
-		Set<Integer> l1 = new HashSet<Integer>(); 
-		Set<Integer> l2 = new HashSet<Integer>(); 
-		for(int i = 1; i <= 10; i++) {
+		HashSet<Integer> l1 = new HashSet<>(); 
+		HashSet<Integer> l2 = new HashSet<>(); 
+		for(int i = 1; i <= 16; i++) {
 			l1.add(i);
 		}
 		for(int j = 10; j < 20; j++) {
